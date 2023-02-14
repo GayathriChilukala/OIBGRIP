@@ -1,0 +1,120 @@
+<html>
+    <head>
+	    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Age Calculator</title>
+    </head>
+	
+	<style>
+	body{
+    display: grid;
+    height:50vh;
+    place-items: center;
+    
+    background-image: url('https://j7i7x4q6.rocketcdn.me/wp-content/uploads/2021/12/illustration-of-different-age-groups-1024x633.webp');
+}
+.container
+{
+    text-align: center;
+    border-radius: 8px;
+    height: 70vh;
+    width: 30vw;
+    background: #50C878;
+}
+
+.container h1
+{
+    margin: 10px;
+}
+.inpSection{
+
+    margin: 20px 50px;
+    text-align: left;
+}
+input{
+    color: rgba(51, 45, 45, 0.5);
+    font-weight: 650;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 15px;
+    height: 35px;
+    margin: 10px;
+    display: flex;
+    width: 20vw;
+}
+.button button{
+    padding: 10px;
+    margin: 10px 110px;
+    font-size: 18px;
+    font-weight: 650;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(224, 217, 217, 0.5);
+}
+.result{
+    position: relative;
+}
+label{
+    font-weight: 600;
+}
+
+h3{
+    font-size: 20px;
+}
+	</style>
+	   </script> 
+		<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <div class="inpSection">
+            <div class="day">
+                <label for="amount">Enter Day:   </label>
+                <input type="number" name="day" id="day" placeholder="Enter Day">
+            </div>
+            <div class="month">
+                <label for="time">Enter Month:   </label>
+                <input type="number" name="month" id="month" placeholder="Enter Month">
+            </div>
+            <div class="year">
+                <label for="rate">Enter Year: </label>
+                <input type="number" name="year" id="year" placeholder="Enter Year">
+            </div>
+            <div class="button">
+                <button onclick="Calculate()">Calculate</button>
+            </div>
+            <div class="result">
+                <h3 id="ag"></h3>
+            </div>
+    </div>
+</body>
+<body>
+    <script language="JavaScript">
+function Calculate()
+{
+var a=0;
+var birthyear = document.getElementById ('year').value;
+var birthmonth = document.getElementById ('month').value
+var birthday = document.getElementById ('day').value;
+var currentyear  = new Date();
+var age   = currentyear.getFullYear();
+var m=currentyear.getMonth()+1;
+var d=currentyear.getDate();
+if(m-birthmonth>=0 )
+{
+if(d-birthday>=0)
+{
+a=age-birthyear;
+document.getElementById ('ag').innerHTML ="Age is <h></h>"+a;
+}
+}
+else
+{
+a=age-birthyear-1;
+document.getElementById ('ag').innerHTML ="Age is <h></h>"+a;
+}
+ }
+ </script>
+</html>
